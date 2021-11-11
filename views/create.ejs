@@ -1,0 +1,36 @@
+<%-include('./partials/header')%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row-lg d-flex align-items-center"><h1>Create a new question</h1><a href="/" class="btn btn-md btn-outline-warning mx-5">Home</a></div>
+            <form action="/create" method="post">
+                <div class="form-group">
+                    <label for="title">question</label>
+                    <input type="text" class="form-control" id="question" name="question">
+                </div>
+                <div class="form-group">
+                    <label for="body">response 1</label>
+                    <input class="form-control" id="response1" name="response1"></input>
+                </div>
+                <div class="form-group">
+                    <label for="body">response 2</label>
+                    <input class="form-control" id="response2" name="response2"></input>
+                </div>
+                <div class="form-group">
+                    <label for="body">response 3</label>
+                    <input class="form-control" id="response3" name="response3"></input>
+                </div>
+                <div class="form-group">
+                    <label for="body">response 4</label>
+                    <input class="form-control" id="response4" name="response4" ></input>
+                </div>
+                <div class="form-group">
+                    <label for="body">correct answer</label>
+                    <input class="form-control" id="correct" name="correct" placeholder="wpis === właściwy wariant"></input>
+                </div>
+                <button type="submit" class="btn btn-primary mt-4">Submit</button>
+            </form>
+        </div>
+    </div>
+<%-include('./partials/footer')%>

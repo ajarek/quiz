@@ -1,0 +1,31 @@
+<script>
+ 
+const rowBtn= document.querySelectorAll('.row button')
+
+const pkt= document.querySelector('.pkt')
+let score=localStorage.getItem('wynik')
+pkt.innerText=score
+
+
+rowBtn.forEach(function(btn){
+    btn.addEventListener('click', function(e){
+        e.preventDefault()
+       
+        let correct=document.querySelector('.correct')
+        if(e.target.textContent===correct.textContent){  
+            score++
+            localStorage.setItem('wynik', score)
+            location.reload()
+            }
+        else{location.reload()}
+    })
+})
+const btn= document.querySelector('.btn-danger')
+function clear(){
+    localStorage.clear()
+    location.reload()
+    
+}
+btn.addEventListener('click', clear)
+
+</script>
